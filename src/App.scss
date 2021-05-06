@@ -1,0 +1,47 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+#root {
+	height: 100%;
+}
+
+#run-btn {
+	background: rgb(179, 179, 179);
+	color: #00000090;
+	box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.25),
+		-2px -2px 12px 0 rgba(255, 255, 255, 0.3);
+	&:focus {
+		outline: none;
+	}
+	&:active {
+		box-shadow: none;
+	}
+	font-weight: bold;
+	svg {
+		stroke-width: 4px;
+	}
+	&.loading {
+		background: none;
+		color: #ffffff90;
+		box-shadow: none;
+		pointer-events: none;
+		svg {
+			animation-name: spin;
+			animation-duration: 2000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
