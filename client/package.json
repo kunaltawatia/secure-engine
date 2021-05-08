@@ -91,11 +91,6 @@
 			"react-app/jest"
 		]
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "prettier --check ."
-		}
-	},
 	"browserslist": {
 		"production": [
 			">0.2%",
